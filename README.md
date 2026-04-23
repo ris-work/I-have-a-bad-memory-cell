@@ -11,7 +11,14 @@ How do I fix the bad RAM issues?
 Use GRUB2 BadRAM addresses.
 
 ### FreeBSD
-FreeBSD has two solutions, one is using GRUB2 and the other is using the BadRAM program specified here (Thanks to ...). 
+FreeBSD has two solutions, one is using GRUB2 and the other is using the BadRAM program specified here (Thanks to Kim Øyhus).   
+The Kim Øyhus' program is run like this:  
+```sh
+gcc -o BadRAM BadRAM-FreeBSD_v0.0.c
+# ./BadRAM 0x11111000 0xffffff00 &
+./BadRAM [address] [mask]
+```
+
 
 ### Microsoft Windows (R)
 This is a bit harder. There are multiple BadRAM drivers for Microsoft Windows (R).  
